@@ -1,7 +1,7 @@
 import requests
 import json
 
-token = '466dfc5e90b3bde63606656646bb7c05'
+token = 'Ваш_токен'
 
 response = requests.post('https://pokemonbattle.me:5000/pokemons', headers={'trainer_token': token}, json={
     "name": "Рапидаш",
@@ -11,7 +11,7 @@ response = requests.post('https://pokemonbattle.me:5000/pokemons', headers={'tra
 print(response.text)
 
 response_put = requests.put('https://pokemonbattle.me:5000/pokemons', headers={'trainer_token': token}, json={
-"pokemon_id": 1546,
+"pokemon_id": 'id_покемона',
     "name": "Rapidash",
     "photo": "https://toppng.com/uploads/preview/a-shiny-banette-fix-sonic-the-sandslash-a-unicorn-rapidash-pokemo-11563286690zqzonc4gzi.png"
 })
@@ -19,7 +19,7 @@ response_put = requests.put('https://pokemonbattle.me:5000/pokemons', headers={'
 print(response_put.text)
 
 response_post = requests.post('https://pokemonbattle.me:5000/trainers/addPokebol', headers={'trainer_token': token}, json={
-    "pokemon_id": "1546"
+    "pokemon_id": "id_покемона"
 })
 
 print(response_post.text)
